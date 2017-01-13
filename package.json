@@ -1,0 +1,23 @@
+{
+  "name": "node-inline-svg",
+  "version": "1.0.0",
+  "description": "Simple Express middleware to replace img tag SVGs with inline SVGs",
+  "main": "svg.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://theverymeanboy@github.com/theverymeanboy/node-inline-svg.git"
+  },
+  "author": "Joe Cruz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/theverymeanboy/node-inline-svg/issues"
+  },
+  "homepage": "https://github.com/theverymeanboy/node-inline-svg#readme",
+  "dependencies": {
+    "cheerio": "^0.22.0",
+    "request": "^2.79.0"
+  }
+}
