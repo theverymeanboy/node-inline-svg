@@ -5,7 +5,7 @@ var getSVGs = function getSVGs ( req , html , callback ) {
 	var $     = cheerio.load ( html );
 	var cache = {};
 	
-	var $imgs    = $ ( 'img[src*=".svg"]' );
+	var $imgs    = $ ( 'img[src*=".svg"]:not([data-convert-ignore])' );
 	var promises = $imgs.length;
 	
 	$imgs.each ( function () {
