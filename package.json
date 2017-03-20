@@ -1,23 +1,41 @@
 {
   "name": "node-inline-svg",
-  "version": "1.0.0",
+  "version": "1.0.1",
+  "author": "Joe Cruz <joecruz.tvmb@gmail.com> (https://cnpagency.com)",
   "description": "Simple Express middleware to replace img tag SVGs with inline SVGs",
-  "main": "svg.js",
+  "homepage": "https://github.com/theverymeanboy/node-inline-svg#readme",
+  "main": "bin/inline-svg.js",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/theverymeanboy/node-inline-svg/issues"
+  },
   "scripts": {
+    "build": "babel ./src/inline-svg.js -o ./bin/inline-svg.js;",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://theverymeanboy@github.com/theverymeanboy/node-inline-svg.git"
   },
-  "author": "Joe Cruz",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/theverymeanboy/node-inline-svg/issues"
-  },
-  "homepage": "https://github.com/theverymeanboy/node-inline-svg#readme",
   "dependencies": {
     "cheerio": "^0.22.0",
     "request": "^2.79.0"
+  },
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-cli": "^6.24.0",
+    "babel-preset-es2015": "^6.24.0"
+  },
+  "babel": {
+    "presets": [
+      "es2015"
+    ],
+    "env": {
+      "test": {
+        "plugins": [
+          "istanbul"
+        ]
+      }
+    }
   }
 }

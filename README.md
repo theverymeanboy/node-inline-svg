@@ -6,7 +6,7 @@ Replace img tag SVGs with inline SVGs, for use with Express
 ```$xslt
 var inlineSVG = require('node-inline-svg');
 
-inlineSVG ( request , html , function ( parsedHtml ) {
+inlineSVG ( request , html , function ( error, parsedHtml ) {
     console.log ( parsedHtml );
 } );
 ```
@@ -15,4 +15,4 @@ inlineSVG ( request , html , function ( parsedHtml ) {
 
 1. request - Node request object
 2. html - The html containg ``<img>`` tags
-3. callback, with the parsed HTML with inline SVGs as the single parameter
+3. callback, with the parsed HTML with inline SVGs as the return value
